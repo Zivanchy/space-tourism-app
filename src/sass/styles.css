@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Nunito+Sans:wght@300;600;800&display=swap");
+:root {
+  --font-family: 'Bellefair', serif;
+  --dark: #0b0d17;
+  --light-blue: #d0d6f9;
+  --white: #ffffff;
+}
+
+html,
+#root {
+  font-family: var(--font-family);
+  background: var(--dark);
+  color: var(--white);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.home__image {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
