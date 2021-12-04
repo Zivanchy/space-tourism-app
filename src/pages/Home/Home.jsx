@@ -4,13 +4,7 @@ import backgroundImage from '../../assets/home/background-home-desktop.jpg';
 
 const Home = () => {
   return (
-    <div className="home">
-      <img
-        src={backgroundImage}
-        alt="background"
-        className="home__background"
-      />
-    </div>
+    <div className="home" style={{ backgroundImage: backgroundImage }}></div>
   );
 };
 
