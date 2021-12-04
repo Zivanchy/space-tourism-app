@@ -30,6 +30,15 @@
   @include flex(row, space-between, center);
 }
 
+.navbar__menu-link {
+  text-decoration: none;
+  color: $white;
+
+  &:not(:last-child) {
+    margin-right: 48px;
+  }
+}
+
 .navbar__menu-item {
   position: relative;
   list-style: none;
@@ -46,10 +55,6 @@
   & > span {
     font-weight: bold;
     margin-right: 11px;
-  }
-
-  &:not(:last-child) {
-    margin-right: 48px;
   }
 
   &::after {

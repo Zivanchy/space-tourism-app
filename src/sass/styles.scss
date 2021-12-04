@@ -1,7 +1,10 @@
 @import 'variables';
 @import 'mixins';
+@import 'animations';
+
 @import 'globals';
 
 @import '../components/Navbar/navbar';
 
 @import '../pages/Home/home';
+@import '../pages/Destinations/destinations';

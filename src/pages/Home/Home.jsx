@@ -5,7 +5,7 @@ import backgroundImage from '../../assets/home/background-home-desktop.jpg';
 const Home = () => {
   return (
     <div
-      className="home"
+      className="home page"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="home__container">

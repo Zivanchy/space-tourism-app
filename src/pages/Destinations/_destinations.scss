@@ -1,0 +1,132 @@
+.destinations__subtitle {
+  font-family: $font-barlow;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 212px;
+  left: 166.5px;
+
+  & > span {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    opacity: 0.25;
+    margin-right: 28px;
+  }
+}
+
+.destinations__image {
+  position: absolute;
+  left: 230px;
+  bottom: 112px;
+}
+
+.destinations__info {
+  position: absolute;
+  right: 163px;
+  bottom: 118px;
+  max-width: 445px;
+
+  @include flex(column, space-between, flex-start);
+}
+
+.destinations__info-menu {
+  @include flex(row, space-between, center);
+  list-style: none;
+  margin-bottom: 52px;
+
+  & > a {
+    text-decoration: none;
+  }
+}
+
+.destinations__info-menu-link {
+  &:not(:last-child) {
+    margin-right: 36px;
+  }
+}
+
+.destinations__info-menu-item {
+  font-family: $font-barlow;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: $light-blue;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 12px;
+    background: $white;
+    opacity: 0;
+    transition: 200ms ease-in-out all;
+  }
+
+  &:hover {
+    opacity: 0.5;
+    &::after {
+      opacity: 0.5;
+    }
+  }
+}
+
+.destinations__info-title {
+  font-size: 100px;
+  font-weight: 100;
+  line-height: 115px;
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.destinations__info-text {
+  font-family: $font-barlow;
+  font-size: 18px;
+  line-height: 32px;
+  color: $light-blue;
+  width: 444px;
+  letter-spacing: 1.5px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $white;
+    margin-top: 54px;
+  }
+}
+
+.destinations__info-footer {
+  @include flex(row, space-between, flex-start);
+  margin-top: 28px;
+}
+
+.destinations__info-tt {
+  @include flex(column, space-between, flex-start);
+  font-family: $font-barlow;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-right: 79px;
+  }
+
+  & > span {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    color: $light-blue;
+  }
+
+  & > p {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
