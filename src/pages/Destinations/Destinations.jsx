@@ -1,33 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
+import getData from '../../useFetchData';
+
 import backgroundImage from '../../assets/destination/background-destination-desktop.jpg';
 
 const Destinations = () => {
-  const [destinationData, setDestinatioData] = useState(null);
+  const [data, setData] = useState(null);
   const [specificDestination, setSpecificDestination] = useState(null);
 
   const { id } = useParams();
 
   useEffect(() => {
+    const fetchData = async () => {
+      const data = await getData('../data.json');
+      setData(data);
+    };
     fetchData();
-  }, [specificDestination]);
+  }, []);
 
-  const fetchData = async () => {
-    const response = await fetch('../data.json');
-    const data = await response.json();
-    setDestinatioData(data.destinations);
-
+  useEffect(() => {
+    if (data === null) return;
     data.destinations.forEach((dest) => {
       if (dest.name.toLowerCase() === id) {
         setSpecificDestination(dest);
+        return;
       }
     });
-  };
+  }, [data, id]);
 
-  if (destinationData === null || specificDestination === null) {
-    return <div className="loading">Loading...</div>;
+  if (data === null || specificDestination === null) {
+    return <div>Loading...</div>;
   }
+
   return (
     <div
       className="destinations page"
@@ -46,7 +51,7 @@ const Destinations = () => {
 
       <div className="destinations__info">
         <ul className="destinations__info-menu">
-          {destinationData.map((dest, index) => (
+          {data.destinations.map((dest, index) => (
             <Link
               className="destinations__info-menu-link"
               to={`/destinations/${dest.name.toLowerCase()}`}
