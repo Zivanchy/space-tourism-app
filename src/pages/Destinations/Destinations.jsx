@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import getData from '../../useFetchData';
+import getData from '../../getData';
 
 import backgroundImage from '../../assets/destination/background-destination-desktop.jpg';
 
