@@ -76,3 +76,9 @@
     }
   }
 }
+
+.active {
+  & > li::after {
+    opacity: 1;
+  }
+}

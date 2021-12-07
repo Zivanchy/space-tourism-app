@@ -211,6 +211,10 @@ html,
   opacity: 0.5;
 }
 
+.active > li::after {
+  opacity: 1;
+}
+
 .home__container {
   display: -webkit-box;
   display: -ms-flexbox;

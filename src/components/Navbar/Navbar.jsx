@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/logo.png';
 
@@ -9,26 +9,29 @@ const Navbar = () => {
       <img src={logo} alt="Logo" className="navbar__logo" />
       <nav className="navbar__container">
         <ul className="navbar__menu">
-          <Link className="navbar__menu-link" to={'/'}>
+          <NavLink className="navbar__menu-link" to={'/'}>
             <li className="navbar__menu-item">
               <span>00</span> Home
             </li>
-          </Link>
-          <Link className="navbar__menu-link" to={'/destinations/moon'}>
+          </NavLink>
+          <NavLink className="navbar__menu-link" to={'/destinations/moon'}>
             <li className="navbar__menu-item">
               <span>01</span> Destination
             </li>
-          </Link>
-          <Link className="navbar__menu-link" to={'/crew/DouglasHurley'}>
+          </NavLink>
+          <NavLink className="navbar__menu-link" to={'/crew/DouglasHurley'}>
             <li className="navbar__menu-item">
               <span>02</span> Crew
             </li>
-          </Link>
-          <Link className="navbar__menu-link" to={'/technology/Launchvehicle'}>
+          </NavLink>
+          <NavLink
+            className="navbar__menu-link"
+            to={'/technology/Launchvehicle'}
+          >
             <li className="navbar__menu-item">
               <span>03</span> Technology
             </li>
-          </Link>
+          </NavLink>
         </ul>
       </nav>
     </div>
