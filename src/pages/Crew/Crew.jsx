@@ -82,12 +82,3 @@ const Crew = () => {
 };
 
 export default Crew;
-
-{
-  /* <Link
-            className="crew__navigation-button"
-            to={`/crew/${person.name.replace(/\s/g, '')}`}
-            key={index}
-            
-          ></Link> */
-}
