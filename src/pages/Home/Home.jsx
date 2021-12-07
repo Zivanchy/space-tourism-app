@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import backgroundImage from '../../assets/home/background-home-desktop.jpg';
 
@@ -19,7 +20,9 @@ const Home = () => {
         </p>
       </div>
 
-      <button className="home__button">Explore</button>
+      <Link to={'/destinations/moon'} className="home__button">
+        Explore
+      </Link>
     </div>
   );
 };
