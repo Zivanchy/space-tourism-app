@@ -516,4 +516,95 @@ html,
 .crew__navigation-button:not(:last-child) {
   margin-right: 24px;
 }
+
+.technology__image {
+  position: absolute;
+  right: 0;
+  bottom: 101px;
+}
+
+.technology__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 165px;
+  bottom: 213px;
+}
+
+.technology__info-description_sub-title {
+  font-size: 16px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  margin-bottom: 11px;
+}
+
+.technology__info-description_title {
+  font-size: 56px;
+  line-height: 64px;
+  margin-bottom: 17px;
+}
+
+.technology__info-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 80px;
+}
+
+.technology__info-navigation_button {
+  text-decoration: none;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+  line-height: 37px;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.technology__info-navigation_button:not(:last-child) {
+  margin-bottom: 32px;
+}
 /*# sourceMappingURL=styles.css.map */

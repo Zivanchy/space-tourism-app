@@ -24,7 +24,7 @@ const Navbar = () => {
               <span>02</span> Crew
             </li>
           </Link>
-          <Link className="navbar__menu-link" to={'/technology'}>
+          <Link className="navbar__menu-link" to={'/technology/Launchvehicle'}>
             <li className="navbar__menu-item">
               <span>03</span> Technology
             </li>

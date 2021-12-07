@@ -1,0 +1,56 @@
+.technology__image {
+  position: absolute;
+  right: 0;
+  bottom: 101px;
+}
+
+.technology__info {
+  @include flex(row, space-between, center);
+  position: absolute;
+  left: 165px;
+  bottom: 213px;
+}
+
+.technology__info-description_sub-title {
+  font-size: 16px;
+  font-family: $font-barlow;
+  font-weight: 100;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: $light-blue;
+  margin-bottom: 11px;
+}
+
+.technology__info-description_title {
+  font-size: 56px;
+  line-height: 64px;
+  margin-bottom: 17px;
+}
+
+.technology__info-navigation {
+  @include flex(column, space-between, center);
+  margin-right: 80px;
+}
+
+.technology__info-navigation_button {
+  text-decoration: none;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+  @include flex(column, center, center);
+
+  font-size: 32px;
+  line-height: 37px;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
