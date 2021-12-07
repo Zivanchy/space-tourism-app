@@ -38,7 +38,7 @@ const Destinations = () => {
       className="destinations page"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <h2 className="destinations__subtitle">
+      <h2 className="destinations__subtitle sub-title">
         <span>01</span>
         Pick your destination
       </h2>
@@ -61,8 +61,10 @@ const Destinations = () => {
             </Link>
           ))}
         </ul>
-        <h1 className="destinations__info-title">{specificDestination.name}</h1>
-        <p className="destinations__info-text">
+        <h1 className="destinations__info-title title">
+          {specificDestination.name}
+        </h1>
+        <p className="destinations__info-text text">
           {specificDestination.description}
         </p>
         <div className="destinations__info-footer">
