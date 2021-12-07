@@ -1,0 +1,48 @@
+.crew__image {
+  position: absolute;
+  bottom: 0;
+  right: 137px;
+}
+
+.crew__info {
+  @include flex(column, space-between, flex-start);
+
+  position: absolute;
+  left: 165px;
+  bottom: 229px;
+}
+
+.crew__info-role {
+  font-size: 32px;
+  line-height: 37px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.crew__info-person_name {
+  font-size: 56px;
+  line-height: 64px;
+  margin-bottom: 27px;
+}
+
+.crew__navigation {
+  @include flex(row, space-between, center);
+  position: absolute;
+  bottom: 94px;
+  left: 167px;
+}
+
+.crew__navigation-button {
+  text-decoration: none;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: $white;
+  opacity: 0.5;
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}

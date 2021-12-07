@@ -444,4 +444,76 @@ html,
   font-size: 28px;
   line-height: 32px;
 }
+
+.crew__image {
+  position: absolute;
+  bottom: 0;
+  right: 137px;
+}
+
+.crew__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  left: 165px;
+  bottom: 229px;
+}
+
+.crew__info-role {
+  font-size: 32px;
+  line-height: 37px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.crew__info-person_name {
+  font-size: 56px;
+  line-height: 64px;
+  margin-bottom: 27px;
+}
+
+.crew__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 94px;
+  left: 167px;
+}
+
+.crew__navigation-button {
+  text-decoration: none;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.crew__navigation-button:not(:last-child) {
+  margin-right: 24px;
+}
 /*# sourceMappingURL=styles.css.map */
