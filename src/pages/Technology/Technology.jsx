@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import getData from '../../getData';
+import { APIContext } from '../../DataProvider';
 
 import backgroundImage from '../../assets/technology/background-technology-desktop.jpg';
 
 const Technology = () => {
-  const [data, setData] = useState(null);
   const [specificTech, setSpecificTech] = useState(null);
+  const [data, isLoading] = useContext(APIContext);
+  const { id } = useParams();
 
   const activeButton = {
     background: 'white',
     color: 'black',
   };
-
-  const { id } = useParams();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getData('../data.json');
-      setData(data);
-    };
-    fetchData();
-  }, []);
 
   useEffect(() => {
     if (data === null) return;
@@ -34,9 +25,8 @@ const Technology = () => {
     });
   }, [data, id]);
 
-  if (data === null || specificTech === null) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading || specificTech === null) return <div>Loading...</div>;
+
   return (
     <div
       className="technology page"

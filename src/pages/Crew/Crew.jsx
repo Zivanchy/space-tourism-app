@@ -1,27 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import getData from '../../getData';
+import { APIContext } from '../../DataProvider';
 
 import backgroundImage from '../../assets/crew/background-crew-desktop.jpg';
 
 const Crew = () => {
-  const [data, setData] = useState(null);
   const [specificCrew, setSpecificCrew] = useState(null);
+  const [data, isLoading] = useContext(APIContext);
+  const { id } = useParams();
 
   const activeButton = {
     opacity: 1,
   };
-
-  const { id } = useParams();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getData('../data.json');
-      setData(data);
-    };
-    fetchData();
-  }, []);
 
   useEffect(() => {
     if (data === null) return;
@@ -33,9 +24,7 @@ const Crew = () => {
     });
   }, [data, id]);
 
-  if (data === null || specificCrew === null) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading || specificCrew === null) return <div>Loading...</div>;
 
   return (
     <div

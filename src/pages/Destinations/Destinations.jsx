@@ -1,23 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-import getData from '../../getData';
+import { APIContext } from '../../DataProvider';
 
 import backgroundImage from '../../assets/destination/background-destination-desktop.jpg';
 
 const Destinations = () => {
-  const [data, setData] = useState(null);
   const [specificDestination, setSpecificDestination] = useState(null);
-
+  const [data, isLoading] = useContext(APIContext);
   const { id } = useParams();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getData('../data.json');
-      setData(data);
-    };
-    fetchData();
-  }, []);
 
   useEffect(() => {
     if (data === null) return;
@@ -29,9 +20,7 @@ const Destinations = () => {
     });
   }, [data, id]);
 
-  if (data === null || specificDestination === null) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading || specificDestination === null) return <div>Loading...</div>;
 
   return (
     <div
