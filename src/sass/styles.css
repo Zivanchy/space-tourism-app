@@ -80,13 +80,37 @@ html,
   left: 166.5px;
 }
 
+@media screen and (max-width: 1023px) {
+  .sub-title {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+    top: 136px;
+    left: 39px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sub-title {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    position: static;
+    margin: 88px auto 0;
+    text-align: center;
+  }
+}
+
 .sub-title > span {
-  font-size: 28px;
   font-weight: bold;
-  line-height: 34px;
-  letter-spacing: 4.725px;
   opacity: 0.25;
   margin-right: 28px;
+}
+
+@media screen and (max-width: 1023px) {
+  .sub-title > span {
+    margin-right: 19px;
+  }
 }
 
 .title {
@@ -98,6 +122,22 @@ html,
   margin-bottom: 14px;
 }
 
+@media screen and (max-width: 1023px) {
+  .title {
+    font-size: 80px;
+    line-height: 92px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+
 .text {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 18px;
@@ -105,6 +145,23 @@ html,
   color: #d0d6f9;
   width: 444px;
   letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 1023px) {
+  .text {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text {
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .navbar {
@@ -127,12 +184,43 @@ html,
   z-index: 10;
 }
 
+@media screen and (max-width: 1023px) {
+  .navbar {
+    margin-top: 0;
+    margin-left: 39px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    margin: 24px;
+  }
+}
+
 .navbar__container {
   position: relative;
   padding: 39px 165px 38px 123px;
   background: rgba(255, 255, 255, 0.04);
   -webkit-backdrop-filter: blur(81.5485px);
           backdrop-filter: blur(81.5485px);
+}
+
+@media screen and (max-width: 1439px) {
+  .navbar__container {
+    padding: 39px 80px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar__container {
+    padding: 39px 47px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar__container {
+    display: none;
+  }
 }
 
 .navbar__container::after {
@@ -144,6 +232,12 @@ html,
   position: absolute;
   right: 95%;
   bottom: 50%;
+}
+
+@media screen and (max-width: 1439px) {
+  .navbar__container::after {
+    display: none;
+  }
 }
 
 .navbar__menu {
@@ -171,6 +265,12 @@ html,
   margin-right: 48px;
 }
 
+@media screen and (max-width: 1023px) {
+  .navbar__menu-link:not(:last-child) {
+    margin-right: 37px;
+  }
+}
+
 .navbar__menu-item {
   position: relative;
   list-style: none;
@@ -185,9 +285,23 @@ html,
   letter-spacing: 2.7px;
 }
 
+@media screen and (max-width: 1023px) {
+  .navbar__menu-item {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+  }
+}
+
 .navbar__menu-item > span {
   font-weight: bold;
   margin-right: 11px;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar__menu-item > span {
+    display: none;
+  }
 }
 
 .navbar__menu-item::after {
@@ -215,6 +329,22 @@ html,
   opacity: 1;
 }
 
+.home {
+  background-image: url("../assets/home/background-home-desktop.jpg");
+}
+
+@media screen and (max-width: 1023px) {
+  .home {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+}
+
 .home__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,6 +366,15 @@ html,
   left: 165px;
 }
 
+@media screen and (max-width: 1023px) {
+  .home__container {
+    position: relative;
+    margin: 202px auto 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
 .home__container-subtitle {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 28px;
@@ -245,10 +384,44 @@ html,
   color: #d0d6f9;
 }
 
+@media screen and (max-width: 1023px) {
+  .home__container-subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 3.375px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home__container-subtitle {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+}
+
 .home__container-title {
   font-size: 150px;
   line-height: 172px;
+  font-weight: 100;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1023px) {
+  .home__container-title {
+    line-height: 150px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home__container-title {
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .home__container-text {
@@ -257,6 +430,24 @@ html,
   line-height: 32px;
   letter-spacing: 1.2px;
   color: #d0d6f9;
+}
+
+@media screen and (max-width: 1023px) {
+  .home__container-text {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home__container-text {
+    font-size: 15px;
+    line-height: 25px;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .home__button {
@@ -287,6 +478,31 @@ html,
   color: #0b0d17;
 }
 
+@media screen and (max-width: 1439px) {
+  .home__button {
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .home__button {
+    width: 242px;
+    height: 242px;
+    position: static;
+    margin: 156px auto 90px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home__button {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 1.25px;
+  }
+}
+
 .home__button::after {
   content: '';
   display: block;
@@ -301,16 +517,64 @@ html,
   position: absolute;
 }
 
+@media screen and (max-width: 1023px) {
+  .home__button::after {
+    display: none;
+  }
+}
+
 .home__button:hover::after {
   opacity: 0.1;
   -webkit-animation: pulsate-bck 3s ease-in-out infinite both;
           animation: pulsate-bck 3s ease-in-out infinite both;
 }
 
+.destinations {
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
+}
+
+@media screen and (max-width: 1023px) {
+  .destinations {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .destinations {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+}
+
 .destinations__image {
   position: absolute;
   left: 230px;
   bottom: 112px;
+}
+
+@media screen and (max-width: 1439px) {
+  .destinations__image {
+    left: 80px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .destinations__image {
+    width: 300px;
+    height: 300px;
+    position: static;
+    margin: 220px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .destinations__image {
+    width: 170px;
+    height: 170px;
+    margin: 32px auto 26px;
+  }
 }
 
 .destinations__info {
@@ -331,6 +595,27 @@ html,
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media screen and (max-width: 1439px) {
+  .destinations__info {
+    right: 13px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .destinations__info {
+    position: static;
+    margin: 53px auto 62px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .destinations__info {
+    margin: 0 auto;
+    width: 85%;
+    text-align: center;
+  }
 }
 
 .destinations__info-menu {
@@ -355,8 +640,36 @@ html,
   text-decoration: none;
 }
 
+@media screen and (max-width: 1023px) {
+  .destinations__info-menu {
+    margin: 0 auto 32px;
+  }
+}
+
 .destinations__info-menu-link:not(:last-child) {
   margin-right: 36px;
+}
+
+@media screen and (max-width: 767px) {
+  .destinations__info-menu-link:not(:last-child) {
+    margin-right: 27px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .destinations__info-menu-link {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .destinations__info-menu-link {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+  }
 }
 
 .destinations__info-menu-item {
@@ -415,6 +728,31 @@ html,
   margin-top: 28px;
 }
 
+@media screen and (max-width: 1023px) {
+  .destinations__info-footer {
+    margin: 28px auto 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .destinations__info-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 28px;
+  }
+}
+
 .destinations__info-tt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -433,8 +771,20 @@ html,
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+  .destinations__info-tt {
+    display: block;
+  }
+}
+
 .destinations__info-tt:not(:last-child) {
   margin-right: 79px;
+}
+
+@media screen and (max-width: 767px) {
+  .destinations__info-tt:not(:last-child) {
+    margin: 0;
+  }
 }
 
 .destinations__info-tt > span {
@@ -444,9 +794,43 @@ html,
   color: #d0d6f9;
 }
 
+@media screen and (max-width: 767px) {
+  .destinations__info-tt > span {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 2.3625px;
+  }
+}
+
 .destinations__info-tt > p {
   font-size: 28px;
   line-height: 32px;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 767px) {
+  .destinations__info-tt > p {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+  }
+}
+
+.crew {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+}
+
+@media screen and (max-width: 1023px) {
+  .crew {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .crew {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+  }
 }
 
 .crew__image {
@@ -519,6 +903,22 @@ html,
 
 .crew__navigation-button:not(:last-child) {
   margin-right: 24px;
+}
+
+.technology {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
+}
+
+@media screen and (max-width: 1023px) {
+  .technology {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .technology {
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+  }
 }
 
 .technology__image {

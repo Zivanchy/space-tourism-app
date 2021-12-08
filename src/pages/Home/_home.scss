@@ -1,3 +1,13 @@
+.home {
+  background-image: url('../assets/home/background-home-desktop.jpg');
+  @include tabletScreenSize {
+    background-image: url('../assets/home/background-home-tablet.jpg');
+  }
+  @include mobileScreenSize {
+    background-image: url('../assets/home/background-home-mobile.jpg');
+  }
+}
+
 .home__container {
   @include flex(column, space-between, flex-start);
   gap: 24px;
@@ -6,6 +16,13 @@
   position: absolute;
   bottom: 131px;
   left: 165px;
+
+  @include tabletScreenSize {
+    position: relative;
+    margin: 202px auto 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .home__container-subtitle {
@@ -14,14 +31,39 @@
   line-height: 34px;
   letter-spacing: 4.725px;
   text-transform: uppercase;
-
   color: $light-blue;
+
+  @include tabletScreenSize {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 3.375px;
+    width: 100%;
+  }
+
+  @include mobileScreenSize {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
 }
 
 .home__container-title {
   font-size: 150px;
   line-height: 172px;
+  font-weight: 100;
   text-transform: uppercase;
+
+  @include tabletScreenSize {
+    line-height: 150px;
+  }
+
+  @include mobileScreenSize {
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .home__container-text {
@@ -30,6 +72,20 @@
   line-height: 32px;
   letter-spacing: 1.2px;
   color: $light-blue;
+
+  @include tabletScreenSize {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 1.5px;
+  }
+
+  @include mobileScreenSize {
+    font-size: 15px;
+    line-height: 25px;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .home__button {
@@ -56,6 +112,26 @@
   text-decoration: none;
   color: $dark;
 
+  @include laptopScreenSize {
+    right: 100px;
+  }
+
+  @include tabletScreenSize {
+    width: 242px;
+    height: 242px;
+    position: static;
+    margin: 156px auto 90px;
+  }
+
+  @include mobileScreenSize {
+    width: 150px;
+    height: 150px;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 1.25px;
+  }
+
+  //::after used for outer circle animation
   &::after {
     content: '';
     display: block;
@@ -69,6 +145,10 @@
     transition: 300ms ease-in-out all;
 
     position: absolute;
+
+    @include tabletScreenSize {
+      display: none;
+    }
   }
 
   &:hover {

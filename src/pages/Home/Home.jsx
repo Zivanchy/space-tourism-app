@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import backgroundImage from '../../assets/home/background-home-desktop.jpg';
-
 const Home = () => {
   return (
-    <div
-      className="home page"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="home page">
       <div className="home__container">
         <h2 className="home__container-subtitle">So, you want to travel to</h2>
         <h1 className="home__container-title">Space</h1>

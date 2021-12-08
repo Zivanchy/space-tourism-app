@@ -3,8 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 
 import { APIContext } from '../../DataProvider';
 
-import backgroundImage from '../../assets/technology/background-technology-desktop.jpg';
-
 const Technology = () => {
   const [specificTech, setSpecificTech] = useState(null);
   const [data, isLoading] = useContext(APIContext);
@@ -28,10 +26,7 @@ const Technology = () => {
   if (isLoading || specificTech === null) return <div>Loading...</div>;
 
   return (
-    <div
-      className="technology page"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="technology page">
       <h2 className="technology__subtitle sub-title">
         <span>03</span>
         Space launch 101

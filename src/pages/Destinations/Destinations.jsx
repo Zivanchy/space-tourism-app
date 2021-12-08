@@ -3,8 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 
 import { APIContext } from '../../DataProvider';
 
-import backgroundImage from '../../assets/destination/background-destination-desktop.jpg';
-
 const Destinations = () => {
   const [specificDestination, setSpecificDestination] = useState(null);
   const [data, isLoading] = useContext(APIContext);
@@ -23,10 +21,7 @@ const Destinations = () => {
   if (isLoading || specificDestination === null) return <div>Loading...</div>;
 
   return (
-    <div
-      className="destinations page"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="destinations page">
       <h2 className="destinations__subtitle sub-title">
         <span>01</span>
         Pick your destination

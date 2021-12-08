@@ -4,3 +4,21 @@
   justify-content: $jc;
   align-items: $ai;
 }
+
+@mixin laptopScreenSize {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin tabletScreenSize {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin mobileScreenSize {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

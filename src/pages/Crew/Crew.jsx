@@ -3,8 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 
 import { APIContext } from '../../DataProvider';
 
-import backgroundImage from '../../assets/crew/background-crew-desktop.jpg';
-
 const Crew = () => {
   const [specificCrew, setSpecificCrew] = useState(null);
   const [data, isLoading] = useContext(APIContext);
@@ -27,10 +25,7 @@ const Crew = () => {
   if (isLoading || specificCrew === null) return <div>Loading...</div>;
 
   return (
-    <div
-      className="crew page"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="crew page">
       <h2 className="crew__subtitle sub-title">
         <span>02</span>
         Meet your creew

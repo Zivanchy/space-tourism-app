@@ -5,6 +5,15 @@
   position: relative;
 
   z-index: 10;
+
+  @include tabletScreenSize {
+    margin-top: 0;
+    margin-left: 39px;
+  }
+
+  @include mobileScreenSize {
+    margin: 24px;
+  }
 }
 
 .navbar__container {
@@ -13,6 +22,18 @@
 
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(81.5485px);
+
+  @include laptopScreenSize {
+    padding: 39px 80px;
+  }
+
+  @include tabletScreenSize {
+    padding: 39px 47px;
+  }
+
+  @include mobileScreenSize {
+    display: none;
+  }
 
   &::after {
     content: '';
@@ -23,6 +44,10 @@
     position: absolute;
     right: 95%;
     bottom: 50%;
+
+    @include laptopScreenSize {
+      display: none;
+    }
   }
 }
 
@@ -36,6 +61,10 @@
 
   &:not(:last-child) {
     margin-right: 48px;
+
+    @include tabletScreenSize {
+      margin-right: 37px;
+    }
   }
 }
 
@@ -52,9 +81,19 @@
   line-height: 19px;
   letter-spacing: 2.7px;
 
+  @include tabletScreenSize {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+  }
+
   & > span {
     font-weight: bold;
     margin-right: 11px;
+
+    @include tabletScreenSize {
+      display: none;
+    }
   }
 
   &::after {
